@@ -4,7 +4,7 @@
 def key_for_min_value(name_hash)
   i = 0
   while i < name_hash.length do
-    if name_hash.all?{|key, value| value >= 1}#name_hash[i]}
+    if name_hash.all?{|key, value| value >= name_hash[key]}
       return name_hash[i]
     end
     i += 1
