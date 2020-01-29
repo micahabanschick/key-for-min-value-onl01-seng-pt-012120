@@ -8,7 +8,8 @@ def key_for_min_value(name_hash)
   i = 0
   j = 0
   while i < name_hash.length do
-    while j < name_hash.length do 
-      if name_hash.all?{|num| num }
+    if name_hash.all?{|num| num >= name_hash[i]}
+      return name_hash[i]
+    end 
   end 
 end
